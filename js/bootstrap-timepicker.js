@@ -917,6 +917,10 @@
         return;
       }
 
+      if (this.$widget === false) {
+        return;
+      }
+
       // show/hide approach taken by datepicker
       this.$widget.appendTo(this.appendWidgetTo);
       $(document).on('mousedown.timepicker, touchend.timepicker', {scope: this}, this.handleDocumentClick);
